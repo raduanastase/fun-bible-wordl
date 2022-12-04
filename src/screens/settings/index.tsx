@@ -25,10 +25,10 @@ export default function Settings() {
         }}
       />
       <Button
-        title="TR"
+        title="RO"
         onPress={() => {
-          dispatch(setGameLanguage('tr'));
-          setStoreData('language', 'tr');
+          dispatch(setGameLanguage('ro'));
+          setStoreData('language', 'ro');
           resetGame();
         }}
       />

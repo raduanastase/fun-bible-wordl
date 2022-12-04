@@ -3,8 +3,8 @@ export const adjustLetterDisplay = (
   gameLanguage: string
 ): string => {
   switch (letter) {
-    case 'i':
-      return gameLanguage === 'tr' ? 'İ' : letter;
+    /*case 'i':
+      return gameLanguage === 'tr' ? 'İ' : letter;*/
     default:
       return letter;
   }

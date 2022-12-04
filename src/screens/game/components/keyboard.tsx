@@ -13,10 +13,10 @@ const keysEN: string[][] = [
   ['Enter', 'z', 'x', 'c', 'v', 'b', 'n', 'm', '<'],
 ];
 
-const keysTR: string[][] = [
-  ['e', 'r', 't', 'y', 'u', 'ı', 'o', 'p', 'ğ', 'ü'],
-  ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'ş', 'i'],
-  ['Enter', 'z', 'c', 'v', 'b', 'n', 'm', 'ö', 'ç', '<'],
+const keysRO: string[][] = [
+  ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
+  ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'],
+  ['Enter', 'z', 'x', 'c', 'v', 'b', 'n', 'm', '<'],
 ];
 
 interface KeyboardProps {
@@ -25,7 +25,7 @@ interface KeyboardProps {
 
 export default function Keyboard({ handleGuess }: KeyboardProps) {
   const { usedKeys, gameLanguage } = useAppSelector((state) => state.gameState);
-  const keyboard = gameLanguage === 'en' ? keysEN : keysTR;
+  const keyboard = gameLanguage === 'ro' ? keysRO : keysEN;
   const handleKeyboardKeyColor = (key: string) => {
     const keyData = usedKeys[key];
     if (keyData) {

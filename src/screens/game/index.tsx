@@ -18,7 +18,7 @@ import {
 import { guess, matchStatus } from '../../types';
 import { HEIGHT, initialGuesses, SIZE } from '../../utils/constants';
 import { getStoreData } from '../../utils/localStorageFuncs';
-import { answersEN, answersTR, wordsEN, wordsTR } from '../../words';
+import {answersEN, answersRO, wordsEN, wordsRO} from '../../words';
 import GameBoard from './components/gameBoard';
 
 export default function Game() {
@@ -44,10 +44,10 @@ export default function Game() {
     switch (gameLanguage) {
       case 'en':
         return wordsEN.concat(answersEN);
-      case 'tr':
-        return wordsTR.concat(answersTR);
+      case 'ro':
+        return wordsRO.concat(answersRO);
       default:
-        return wordsEN.concat(answersEN);
+        return wordsRO.concat(answersRO);
     }
   };
 
@@ -55,10 +55,10 @@ export default function Game() {
     switch (gameLanguage) {
       case 'en':
         return answersEN;
-      case 'tr':
-        return answersTR;
+      case 'ro':
+        return answersRO;
       default:
-        return answersEN;
+        return answersRO;
     }
   };
 
